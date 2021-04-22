@@ -29,6 +29,7 @@ img {
     padding-right: 130px;
     padding-bottom: 30px;
     height: 100vh;
+    background-color: #009587;
 }
 
 
@@ -64,7 +65,7 @@ nav {
     width: 40%;
     height: 100%;
     float: left;
-    background-color: red;
+    background-color: white;
     overflow-y: auto;
 }
 
@@ -139,7 +140,6 @@ nav {
 /*inizio nav*/
 .nav-top {
     background-color: #eaeaea;
-    padding-bottom: 10px;
 }
 
 .ricevi-notifiche {
@@ -182,6 +182,33 @@ nav {
 
 
 /*inizio main-content*/
+.main-content {
+    background-image: url("../img/mine.jpg");
+    height: 100%;
+}
+
+.write-input {
+    height: 60px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-input {
+    padding: 20px;
+    padding-top: 15px;
+}
+
+.text-input input {
+    width: 570px;
+    border: none;
+    padding: 8px 0px;
+}
+
+.text-area-box {
+    height: calc( 100% - 60px );
+    width: 100%;
+}
 
 /*fine main-content*/
 
