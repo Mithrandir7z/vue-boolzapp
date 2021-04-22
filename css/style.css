@@ -10,6 +10,14 @@ img {
     display: block;
 }
 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
 
 .clearfix {
     position: relative;
@@ -90,6 +98,7 @@ nav {
     width: 60px;
     height: auto;
     display: flex;
+    cursor: pointer;
 }
 
 .avatar h3 {
@@ -178,6 +187,16 @@ nav {
     padding: 6px 0px;
     border: none;
 }
+
+.utente {
+    padding: 20px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.utente a {
+    text-decoration: none;
+    color: black;
+}
 /*fine nav*/
 
 
@@ -210,6 +229,32 @@ nav {
     width: 100%;
 }
 
+.margin-text {
+    margin: 20px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-left, .col-right {
+    width: 50%;
+}
+
+.received {
+    margin: 10px;
+    width: 300px;
+    padding: 30px 5px;
+    background-color: #f3eeea;
+    border-radius: 10px;
+}
+
+.sent {
+    margin: 10px;
+    width: 300px;
+    padding: 30px 5px;
+    background-color: #d5f9ba;
+    border-radius: 10px;
+    align-self: flex-end;
+}
 /*fine main-content*/
 
 /*FINE MAIN*/

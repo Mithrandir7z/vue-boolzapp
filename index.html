@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<div class="app-wrapper">
+<div id="root" class="app-wrapper">
     <!--INIZIO HEADER-->
     <header>
 
@@ -52,7 +52,7 @@
 
             <div class="panel_right">
                 <div class="avatar_utenti">
-                    <h3>{{nomeUtente}}</h3>
+                    <h3></h3>
                 </div>
 
                 <div class="buttons_icon">
@@ -100,13 +100,34 @@
                     </div>
                 </div>
             </div>
+
+            <div class="nav-bottom">
+                <!--Se clicko sul div dei contatti parte la funzione che rende attivo quell'indice dell'array contacts, e quindi stamperà in tutta la pagina (quando richiesto in scrittura) quell oggetto e le relative proprietà-->
+                <div @click="changeContact(index)" class="utente" v-for="(element, index) in contacts" :src="myIndex == index ? 'Active' : '' ">
+                    <ul>
+                        <li class="avatar">
+                            <img :src="element.avatar" alt="mio-avatar">
+                            <h3>{{element.name}}</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <div class="main-content">
 
-            <div class="text-area-box">
-
+            <!--SCRITTURA MESSAGGI----------------------------------------------------->
+            <div class="text-area-box clearfix">
+               <div class="margin-text">
+                   <!--stampa tutte le proprietà messages disponibili relative all'oggetto indicato dal contatore myIndex che viene attivato con la classe Active (funzione al click)-->
+                    <div v-for="(element, index) in contacts[myIndex].messages" :class="element.status">
+                        {{element.text}}
+                        
+                    </div>
+               </div>
             </div>
+
+
 
            <div class="write-input">
                <div class="emoticons icons">
