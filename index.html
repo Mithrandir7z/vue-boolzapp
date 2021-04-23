@@ -119,7 +119,7 @@
             <!--SCRITTURA MESSAGGI----------------------------------------------------->
             <div class="text-area-box clearfix">
                <div class="margin-text">
-                   <!--stampa tutte le proprietà messages disponibili relative all'oggetto indicato dal contatore myIndex che viene attivato con la classe Active (funzione al click)-->
+                   <!--stampa tutte le proprietà messages disponibili relative all'oggetto indicato dal contatore myIndex che viene attivato al click (funzione click)-->
                     <div v-for="(element, index) in contacts[myIndex].messages" :class="element.status">
                         {{element.text}}
                         
@@ -136,7 +136,7 @@
 
                <div class="text-input">
                 <label for="">
-                    <input type="text" v-model="valueWrite" @keyup.enter="write">
+                    <input type="text" v-model="valueWrite" @keyup.enter="write" @keyup.enter="answer">
                 </label>
                </div>
 

@@ -123,8 +123,10 @@ var app = new Vue (
 
                 console.log(this.contacts[this.myIndex].messages);
                 this.valueWrite = "";
+            },
 
-                
+            answer() {
+                setTimeout(function(){ alert("Hello"); }, 3000);
             }
         }
     }
