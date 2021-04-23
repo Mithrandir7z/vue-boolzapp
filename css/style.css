@@ -31,7 +31,7 @@ img {
 }
 
 .active {
-    background-color: grey;
+    background-color: rgb(207, 207, 207);
 }
 
 /*HEADER*/
@@ -105,7 +105,6 @@ nav {
     width: 60px;
     height: auto;
     display: flex;
-    cursor: pointer;
 }
 
 .avatar h3 {
@@ -198,6 +197,7 @@ nav {
 .utente {
     padding: 20px;
     border-bottom: 1px solid rgb(233, 233, 233);
+    cursor: pointer;
 }
 
 .utente a {

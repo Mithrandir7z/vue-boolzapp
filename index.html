@@ -103,7 +103,7 @@
 
             <div class="nav-bottom">
                
-                <div @click="changeContact(index)" class="utente" v-for="(element, index) in contacts" :src="myIndex == index ? 'Active' : '' ">
+                <div @click="changeContact(index)" class="utente" v-for="(element, index) in contacts" :class="myIndex == index ? 'active' : '' ">
                     <ul>
                         <li class="avatar">
                             <img :src="element.avatar" alt="mio-avatar">
