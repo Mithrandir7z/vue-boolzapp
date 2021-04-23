@@ -102,7 +102,7 @@
             </div>
 
             <div class="nav-bottom">
-                <!--Se clicko sul div dei contatti parte la funzione che rende attivo quell'indice dell'array contacts, e quindi stamperà in tutta la pagina (quando richiesto in scrittura) quell oggetto e le relative proprietà-->
+               
                 <div @click="changeContact(index)" class="utente" v-for="(element, index) in contacts" :src="myIndex == index ? 'Active' : '' ">
                     <ul>
                         <li class="avatar">
@@ -144,6 +144,7 @@
                 <i class="fas fa-microphone"></i>
                </div>
            </div>
+           
         </div>
     </main>
     <!--FINE MAIN-->

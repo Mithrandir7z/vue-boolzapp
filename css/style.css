@@ -30,8 +30,15 @@ img {
     height: 100vh;
 }
 
+.active {
+    background-color: grey;
+}
+
 /*HEADER*/
 .app-wrapper {
+    width: 100%;
+    min-width: 1200px;
+    min-height: 600px;
     padding-top: 50px;
     padding-left: 130px;
     padding-right: 130px;
