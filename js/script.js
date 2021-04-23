@@ -16,6 +16,7 @@ var app = new Vue (
         el: '#root',
         data: {
 
+            valueWrite: "",
             myIndex: 0,
             contacts: [
                 {
@@ -108,6 +109,22 @@ var app = new Vue (
         methods: {
             changeContact(index) {
                 this.myIndex = index;
+            },
+
+            write() {
+                console.log(this.valueWrite);
+
+                let newObject = {
+                    text: this.valueWrite,
+                    status: 'sent'
+                }
+
+                this.contacts[this.myIndex].messages.push(newObject);
+
+                console.log(this.contacts[this.myIndex].messages);
+                this.valueWrite = "";
+
+                
             }
         }
     }
