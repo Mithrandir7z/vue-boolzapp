@@ -114,20 +114,28 @@ var app = new Vue (
             write() {
                 console.log(this.valueWrite);
 
-                let newObject = {
+                let newObjectSent = {
                     text: this.valueWrite,
                     status: 'sent'
                 }
 
-                this.contacts[this.myIndex].messages.push(newObject);
+                this.contacts[this.myIndex].messages.push(newObjectSent);
 
                 console.log(this.contacts[this.myIndex].messages);
                 this.valueWrite = "";
-            },
 
-            answer() {
-                setTimeout(function(){ alert("Hello"); }, 3000);
-            }
+                setTimeout(function(){ 
+
+                    let newObjectReceived = {
+                        text: "ok",
+                        status: 'received'
+                    }
+
+                    this.contacts[this.myIndex].messages.push(newObjectReceived);
+                    console.log(this.contacts[this.myIndex].messages);
+                    
+                }, 3000);
+            },
         }
     }
 );
