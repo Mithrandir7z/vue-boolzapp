@@ -17,6 +17,7 @@ var app = new Vue (
         data: {
 
             valueWrite: "",
+            valueSearch: "",
             myIndex: 0,
             contacts: [
                 {
@@ -124,7 +125,9 @@ var app = new Vue (
                 console.log(this.contacts[this.myIndex].messages);
                 this.valueWrite = "";
 
-                setTimeout(function(){ 
+                console.log(this);
+
+                setTimeout( () => { 
 
                     let newObjectReceived = {
                         text: "ok",
@@ -136,6 +139,23 @@ var app = new Vue (
                     
                 }, 3000);
             },
+
+            search() {
+                //prendere la v-model 
+                //se la vmodel è contenuta includes in array contacts.name
+                // if ( this.valueSearch.includes(contacts.name) ) {
+                //     console.log(contacts.name);
+                // }
+
+                this.contacts.forEach(element => {
+                    if ( element.name.includes(this.userFilter) ) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
+
+            }
         }
     }
 );
