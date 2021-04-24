@@ -10,12 +10,12 @@
 // visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
 // Click sul contatto mostra la conversazione del contatto cliccato
 
-
 var app = new Vue (
     {
         el: '#root',
         data: {
 
+            userFilter: "",
             valueWrite: "",
             valueSearch: "",
             myIndex: 0,
@@ -140,22 +140,17 @@ var app = new Vue (
                 }, 3000);
             },
 
-            search() {
-                //prendere la v-model 
-                //se la vmodel è contenuta includes in array contacts.name
-                // if ( this.valueSearch.includes(contacts.name) ) {
-                //     console.log(contacts.name);
-                // }
-
-                this.contacts.forEach(element => {
-                    if ( element.name.includes(this.userFilter) ) {
+            searchFilter() {
+                this.contacts.forEach( (element) => {
+                    
+                    if(element.name.toLowerCase().includes(this.valueSearch.toLowerCase())) {
                         element.visible = true;
                     } else {
                         element.visible = false;
                     }
                 });
-
             }
+
         }
     }
 );

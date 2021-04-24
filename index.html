@@ -94,9 +94,10 @@
                         <i class="fas fa-search"></i>
                     </div>
 
+                    <!--INPUT LETTURA FILTRO-->
                     <div class="search-input">
                         <label for="">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="valueSearch" @keyup="search">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="valueSearch" @keyup="searchFilter">
                         </label>
                     </div>
                 </div>
@@ -127,7 +128,9 @@
                    <!--stampa tutte le proprietà messages disponibili relative all'oggetto indicato dal contatore myIndex che viene attivato al click (funzione click)-->
                     <div v-for="(element, index) in contacts[myIndex].messages" :class="element.status">
                         {{element.text}}
-                        
+                        <div class="orario">
+                            {{element.date}}
+                        </div>
                     </div>
                </div>
             </div>
@@ -140,6 +143,7 @@
                     <i class="far fa-smile"></i>
                </div>
 
+               <!--INPUT SCRITTURA-->
                <div class="text-input">
                 <label for="">
                     <input type="text" v-model="valueWrite" @keyup.enter="write">
