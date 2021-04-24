@@ -43,7 +43,10 @@ img {
     padding-right: 130px;
     padding-bottom: 30px;
     height: 100vh;
-    background-color: #009587;
+
+    /*Gradiente*/
+    background: rgb(0,149,135);
+    background: linear-gradient(180deg, rgba(0,149,135,1) 20%, rgba(213,218,216,1) 20%);
 }
 
 
